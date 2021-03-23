@@ -8,7 +8,7 @@
         </div>
         <h2 class="entry-title"><a href="portfolio-item.html" rel="bookmark">{{ $job->description }}</a></h2>
         <a class='portfoliotype' href='portfolio-category.html'>summer</a>
-
+fdsa
         </header>
     </article>
 @endsection
