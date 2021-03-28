@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Moschino | Minimalist Free HTML Portfolio by WowThemes.net</title>
+<title>Job IT</title>
 <link rel='stylesheet' href='{{asset("css/woocommerce-layout.css")}}' type='text/css' media='all'/>
 <link rel='stylesheet' href='{{asset("css/woocommerce-smallscreen.css")}}' type='text/css' media='only screen and (max-width: 768px)'/>
 <link rel='stylesheet' href='{{asset("css/woocommerce.css")}}' type='text/css' media='all'/>
@@ -19,8 +19,8 @@
 	<div class="container">
 		<header id="masthead" class="site-header">
 		<div class="site-branding">
-			<h1 class="site-title"><a href="{{ route('welcome') }}" rel="home">Moschino</a></h1>
-			<h2 class="site-description">Minimalist Portfolio HTML Template</h2>
+			<h1 class="site-title"><a href="{{ route('welcome') }}" rel="home">Job IT</a></h1>
+			<h2 class="site-description">Job offers for IT </h2>
 		</div>
 		<nav id="site-navigation" class="main-navigation">
 		<button class="menu-toggle">Menu</button>
