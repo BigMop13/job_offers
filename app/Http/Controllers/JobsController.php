@@ -68,12 +68,9 @@ class JobsController
     public function show_related($slug)
     {
         $tag_id=Tag::where('tag_name','=',$slug)->first();
-        // $job_id=DB::table('job_tag')->select('job_id')->where('tag_id','=',$tag_id)->get();
-        // dd($slug);
-        // dd($tag_id->id);
+
         $jobs=[];
         $jobs=Job::where('tag_id','=',$tag_id->id)->get()->toArray();
-        // dd($job[0]);
 
         return view('related_offers',[
             'tags'=>Tag::all(),

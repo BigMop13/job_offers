@@ -17,3 +17,7 @@ Route::get('/', [JobsController::class, 'index'])->name('welcome');
 Route::get('/job/related/{slug}', [JobsController::class,'show_related'])->name('related');
 Route::get('/job/{id}', [JobsController::class, 'show_single'])->name('single');
 
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
