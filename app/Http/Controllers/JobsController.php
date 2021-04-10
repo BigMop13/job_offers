@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Tag;
 use App\Models\Job;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 
 class JobsController
 {
@@ -17,10 +17,17 @@ class JobsController
      */
     public function index()
     {
-
-
+        if(Auth::check())
+        {
+            $user=Auth::user();
+        }
+        else
+        {
+            $user=null;
+        }
         return view('welcome',[
-            'tags'=>Tag::all()
+            'tags'=>Tag::all(),
+            'user'=>$user
         ]);
     }
 

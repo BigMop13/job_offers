@@ -11,10 +11,32 @@
 <link rel='stylesheet' href='{{asset("css/style.css")}}'/>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Oswald:400,500,700%7CRoboto:400,500,700%7CHerr+Von+Muellerhoff:400,500,700%7CQuattrocento+Sans:400,500,700' type='text/css' media='all'/>
 <link rel='stylesheet' href='css/easy-responsive-shortcodes.css' type='text/css' media='all'/>
+<link rel="stylesheet" href="{{ mix('css/app.css') }}">
+<script src="{{ mix('js/app.js') }}" defer></script>
+@livewireStyles
 </head>
 
 @yield('head')
 <body class="home page page-template page-template-template-portfolio page-template-template-portfolio-php">
+@if (Auth::check())
+
+@livewire('navigation-menu')
+
+@else
+    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+        <x-jet-nav-link href="{{ route('login') }}" :active="request()->routeIs('dashboard')" style="position: absolute; right:150px;">
+            {{ __('Login') }}
+        </x-jet-nav-link>
+        <x-jet-nav-link href="{{ route('register') }}" :active="request()->routeIs('dashboard')" style="position: absolute; right:50px;">
+            {{ __('Register') }}
+        </x-jet-nav-link>
+    </div>
+@endif
+
+
+
+
+</div>
 <div id="page">
 	<div class="container">
 		<header id="masthead" class="site-header">
@@ -75,5 +97,6 @@
 <script src='{{asset("js/plugins.js")}}'></script>
 <script src='{{asset("js/scripts.js")}}'></script>
 <script src='{{asset("js/masonry.pkgd.min.js")}}'></script>
+@livewireScripts
 </body>
 </html>
