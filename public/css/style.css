@@ -27,7 +27,7 @@ Tags:white,light,one-column,two-columns,left-sidebar,right-sidebar,fluid-layout,
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
 	border:0;
 	font-family:inherit;
-	font-size:100%;
+	font-size:105%;
 	font-style:inherit;
 	font-weight:inherit;
 	margin:0;
@@ -36,7 +36,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	vertical-align: baseline;
 }
 html {
-	font-size:62.5%;
+	font-size: 100%;
 	/* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
 	overflow-y:scroll;
 	/* Keeps page centered in all browsers regardless of content height */
@@ -265,6 +265,8 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 3%;
 }
 ul,ol {
 	margin:0 0 1.5em 3em;

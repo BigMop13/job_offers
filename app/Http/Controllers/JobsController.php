@@ -38,7 +38,7 @@ class JobsController
      */
     public function create()
     {
-
+        return view('add_job_offer');
     }
 
     /**
@@ -76,7 +76,7 @@ class JobsController
     {
         $tag_id=Tag::where('tag_name','=',$slug)->first();
 
-        $jobs=[];
+        // $jobs=[];
         $jobs=Job::where('tag_id','=',$tag_id->id)->get()->toArray();
 
         return view('related_offers',[
