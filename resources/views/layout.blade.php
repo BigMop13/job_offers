@@ -23,7 +23,7 @@
 @livewire('navigation-menu')
 
 @else
-<x-jet-nav-link href="{{ route('dashboard') }}">
+<x-jet-nav-link href="{{ route('create') }}">
     {{ __('Add new offer') }}
 </x-jet-nav-link>
     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">

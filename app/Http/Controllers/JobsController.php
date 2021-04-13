@@ -38,7 +38,10 @@ class JobsController
      */
     public function create()
     {
-        return view('add_job_offer');
+
+            return view('add_job_offer',[
+                'tags'=>Tag::all()
+            ]);
     }
 
     /**
