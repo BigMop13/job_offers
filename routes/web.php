@@ -19,6 +19,7 @@ Route::get('/', [JobsController::class, 'index'])->name('welcome');
 Route::get('/job/related/{slug}', [JobsController::class,'show_related'])->name('related');
 Route::get('/job/{id}', [JobsController::class, 'show_single'])->name('single');
 Route::get('/create', [JobsController::class, 'create'])->name('create');
+Route::post('create')
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

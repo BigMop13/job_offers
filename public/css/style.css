@@ -285,6 +285,10 @@ dt {
 	font-weight:bold;
 	color:#0a0700;
 }
+.form-group{
+    margin-top:2%;
+    margin-bottom:2%;
+}
 dd {
 	margin-bottom:1.5em;
 }
