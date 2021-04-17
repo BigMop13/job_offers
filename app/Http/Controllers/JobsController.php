@@ -52,7 +52,24 @@ class JobsController
      */
     public function store(Request $request)
     {
+        $title=$request->title;
+        $description=$request->description;
+        $responsibilities=$request->responsibilities;
+        $candidate=$request->candidate;
+        $tag=$request->tag;
 
+
+        $job=new Job;
+        $job->title=$title;
+        $job->description=$description;
+        $job->responsibilities=$responsibilities;
+        $job->perfect_candidate=$candidate;
+
+        $job->save();
+        $job->tags()->attach(1);
+        $job->save();
+
+        return redirect(route('welcome'));
     }
 
     /**
