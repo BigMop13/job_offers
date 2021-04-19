@@ -19,13 +19,7 @@ class CreateJobsTable extends Migration
             $table->text('description');
             $table->text('responsibilities');
             $table->text('perfect_candidate');
-            $table->unsignedBigInteger('tag_id')->nullable();
             $table->timestamps();
-
-            $table->foreign('tag_id')
-                ->references('id')
-                ->on('tags')
-                ->onDelete('cascade');
         });
     }
 

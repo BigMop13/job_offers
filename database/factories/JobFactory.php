@@ -23,10 +23,9 @@ class JobFactory extends Factory
     {
         return [
             'title'=>$this->faker->sentence(2),
-            'description'=>$this->faker->sentence(50),
-            'responsibilities'=>$this->faker->sentence(25),
+            'description'=>$this->faker->sentence(70),
+            'responsibilities'=>$this->faker->sentence(35),
             'perfect_candidate'=>$this->faker->sentence(15),
-            'tag_id'=>$this->faker->numberBetween(1,6)
         ];
     }
-}
+}//zrób skrypt php aby wypełnić pivot table randomowymi wartościami

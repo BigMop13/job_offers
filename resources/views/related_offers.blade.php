@@ -3,6 +3,7 @@
 @section('body')
 
         @foreach ($jobs as $job)
+
         <h1><a href="/job/{{ $job['id'] }}">{{ $job['title'] }}</h1>
         <article class="hentry">
             <header class="entry-header">

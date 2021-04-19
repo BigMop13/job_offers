@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Tag;
 use App\Models\Job;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 
 class JobsController
@@ -58,7 +59,6 @@ class JobsController
         $candidate=$request->candidate;
         $tag=$request->tag;
 
-
         $job=new Job;
         $job->title=$title;
         $job->description=$description;
@@ -94,10 +94,9 @@ class JobsController
      */
     public function show_related($slug)
     {
-        $tag_id=Tag::where('tag_name','=',$slug)->first();
+        $tag=Tag::where('tag_name','=',$slug)->first();
 
-        // $jobs=[];
-        $jobs=Job::where('tag_id','=',$tag_id->id)->get()->toArray();
+        $jobs=$tag->jobs->toArray();
 
         return view('related_offers',[
             'tags'=>Tag::all(),
