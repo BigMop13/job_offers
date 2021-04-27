@@ -23,6 +23,7 @@
     },
     "dependencies": {
         "bootstrap": "^4.6.0",
+        "bootstrap-icons": "^1.4.1",
         "jquery": "^3.6.0",
         "mdbootstrap": "^4.19.2",
         "popper.js": "^1.16.1"

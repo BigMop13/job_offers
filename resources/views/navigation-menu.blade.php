@@ -101,7 +101,10 @@
                             </div>
 
                             <x-jet-dropdown-link href="{{ route('profile.show') }}">
-                                {{ __('Profile') }}
+                                {{ __('User settings') }}
+                            </x-jet-dropdown-link>
+                            <x-jet-dropdown-link href="{{ route('edit_tags') }}">
+                                {{ __('Edit tag preferences') }}
                             </x-jet-dropdown-link>
 
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())

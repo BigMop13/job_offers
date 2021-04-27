@@ -10,5 +10,7 @@
         <h2 class="entry-title">{{ $job->responsibilities }}</h2></br>
         <h2 class="entry-title">{{ $job->perfect_candidate }}</h2>
         </header>
+
+        <form action=""></form>
     </article>
 @endsection

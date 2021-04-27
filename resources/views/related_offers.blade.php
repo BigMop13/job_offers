@@ -4,7 +4,7 @@
 
         @foreach ($jobs as $job)
 
-        <h1><a href="/job/{{ $job['id'] }}">{{ $job['title'] }}</h1>
+        <h1><a href="/job/{{ $job['id'] }}">{{ $job['title'] }}</h1></a>
         <article class="hentry">
             <header class="entry-header">
             <div class="entry-thumbnail">

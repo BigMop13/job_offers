@@ -104,6 +104,18 @@ class JobsController
         ]);
     }
 
+    public function admin_show_all($slug)
+    {
+        $tag=Tag::where('tag_name','=',$slug)->first();
+
+        $jobs=$tag->jobs->toArray();
+
+        return view('admin_all',[
+            'tags'=>Tag::all(),
+            'jobs'=>$jobs
+        ]);
+    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -136,6 +148,10 @@ class JobsController
      */
     public function destroy($id)
     {
-        //
+        $job_offer=Job::find($id);
+        $job_offer->delete();
+
+        return redirect()->back();
     }
+
 }

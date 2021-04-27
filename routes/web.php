@@ -20,6 +20,8 @@ Route::get('/job/related/{slug}', [JobsController::class,'show_related'])->name(
 Route::get('/job/{id}', [JobsController::class, 'show_single'])->name('single');
 Route::get('/create', [JobsController::class, 'create'])->name('create');
 Route::post('/create/store', [JobsController::class, 'store'])->name('store');
+Route::get('/admin_all/{slug}', [JobsController::class, 'admin_show_all'])->name('select');
+Route::delete('/delete/{id}', [JobsController::class, 'destroy'])->name('delete');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
