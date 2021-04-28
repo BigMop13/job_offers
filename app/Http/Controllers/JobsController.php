@@ -125,8 +125,11 @@ class JobsController
      */
     public function edit($id)
     {
-        //
-    }
+        return view('edit_job_offer',[
+            'job'=>Job::find($id),
+            'tags'=>Tag::all()
+        ]);
+        }
 
     /**
      * Update the specified resource in storage.
@@ -137,7 +140,10 @@ class JobsController
      */
     public function update(Request $request, $id)
     {
-        //
+        $job=Job::find($id);
+        $job->update($this->validateOffer());
+
+        return redirect(route('single',$id));
     }
 
     /**
@@ -152,6 +158,16 @@ class JobsController
         $job_offer->delete();
 
         return redirect()->back();
+    }
+
+    protected function validateOffer()
+    {
+        return request()->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'responsibilities' => 'required',
+            'candidate' => 'required',
+        ]);
     }
 
 }
