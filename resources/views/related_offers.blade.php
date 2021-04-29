@@ -3,15 +3,12 @@
 @section('body')
 
         @foreach ($jobs as $job)
+        <div class="jumbotron">
+        <h1 class="display-4"><a href="/job/{{ $job['id'] }}">{{ $job['title'] }}</h1></a>
 
-        <h1><a href="/job/{{ $job['id'] }}">{{ $job['title'] }}</h1></a>
-        <article class="hentry">
-            <header class="entry-header">
-            <div class="entry-thumbnail">
-                <a href="portfolio-item.html"></a>
-            </div>
-            <h2 class="entry-title"><a href="/job/{{ $job['id'] }}" rel="bookmark">{{ $job['title'] }}</a></h2>
-            </header>
-        </article>
+
+        <p class="lead"><a href="/job/{{ $job['id'] }}" rel="bookmark">{{ mb_substr($job['description'],0,220) }}...</a></p>
+        <hr class="my-4">
+        </div>
         @endforeach
 @endsection

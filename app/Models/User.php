@@ -18,6 +18,14 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
 
+    public function roles() {
+        return $this->belongsToMany(Role::class, 'user_role');
+    }
+
+    public function isAdministrator() {
+        return $this->roles()->where('name', 'Administrator')->exists();
+     }
+
     /**
      * The attributes that are mass assignable.
      *

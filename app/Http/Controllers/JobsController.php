@@ -80,10 +80,13 @@ class JobsController
      */
     public function show_single($id)
     {
-        return view('single_offer',[
-            'job'=>Job::find($id),
+
+        $job=Job::find($id);
+
+        return view('single_offer', array(
+            'job'=>$job,
             'tags'=>Tag::all()
-        ]);
+        ));
     }
 
     /**

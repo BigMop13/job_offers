@@ -16,7 +16,7 @@ class JobTagSeeder extends Seeder
      */
     public function run()
     {
-        for($i=0;$i<50;$i++)
+        for($i=0;$i<70;$i++)
         {
         DB::table('job_tag')->insert(
             [

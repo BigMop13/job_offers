@@ -1,16 +1,14 @@
 @extends('layout')
 
 @section('body')
-    <article class="hentry">
-        <header class="entry-header">
-        <div class="entry-thumbnail">
-            <h1>{{ $job->title }}</h1>
-        </div>
-        <h2 class="entry-title">{{ $job->description }}</h2></br>
-        <h2 class="entry-title">{{ $job->responsibilities }}</h2></br>
-        <h2 class="entry-title">{{ $job->perfect_candidate }}</h2>
-        </header>
-
-        <form action=""></form>
-    </article>
+<div class="jumbotron">
+    <h1 class="display-3">{{ $job->title }}</h1>
+    <p class="lead">{{ $job->description }}</p>
+    <hr class="my-4">
+    <h1 class="display-7">Responsibilities</h1>
+    <p class="lead">{{ $job->responsibilities }}</p>
+    <hr class="my-4">
+    <h1 class="display-7">Requirements for the candidate</h1>
+    <p class="lead">{{ $job->perfect_candidate }}</p>
+  </div>
 @endsection
